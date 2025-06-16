@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Video Analysis | PCOS Predictor{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h2 class="text-primary fw-bold mb-3">AI-Powered Symptom Scanner</h2>
+        <p class="lead">Use your webcam to detect signs like acne or fatigue. If PCOS indicators are found, you'll be guided to full prediction.</p>
+    </div>
+
+    <!-- Webcam Detection Section -->
+    <div class="card my-4 shadow-sm">
+        <div class="card-body text-center">
+            <h5 class="card-title"> Webcam Live Detection</h5>
+            <button class="btn btn-primary mb-3" onclick="startWebcam()">Start Webcam</button>
+            <p class="text-muted">Your webcam feed will appear below </p>
+            <video id="webcam" width="400" height="300" autoplay playsinline class="mt-3 border rounded"></video>
+
+            <!-- Detected Symptoms -->
+            <div id="symptom-results" class="mt-4 text-start mx-auto" style="max-width: 400px;">
+                <h6 class="fw-bold">🔍 Detected Symptoms:</h6>
+                <ul class="list-group">
+                    <li class="list-group-item" id="acne-result">Acne: Not detected</li>
+                    <li class="list-group-item" id="fatigue-result">Fatigue: Not detected</li>
+                    <li class="list-group-item" id="hairloss-result">Hair Loss: Not detected</li>
+                </ul>
+                <!--  Only ONE pocs-alert -->
+                <div id="pocs-alert" class="alert alert-warning mt-4 d-none fw-bold">
+                     PCOS symptoms detected via webcam! Redirecting to prediction...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function startWebcam() {
+        const video = document.getElementById('webcam');
+        const acneResult = document.getElementById('acne-result');
+        const fatigueResult = document.getElementById('fatigue-result');
+        const hairLossResult = document.getElementById('hairloss-result');
+        const alertBox = document.getElementById('pocs-alert');
+
+        let redirected = false;
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                video.srcObject = stream;
+                const canvas = document.createElement('canvas');
+                canvas.width = 400;
+                canvas.height = 300;
+
+                setInterval(() => {
+                    if (redirected) return;
+
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const imageData = canvas.toDataURL('image/jpeg');
+
+                    fetch('/analyze_frame', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ image: imageData })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(" Received data:", data);
+
+                        let acne = "Not detected";
+                        let fatigue = "Not detected";
+                        let hairLoss = "Not detected";
+
+                        if (typeof data.result === 'object') {
+                            acne = data.result.Acne || acne;
+                            fatigue = data.result.Fatigue || fatigue;
+                            hairLoss = data.result["Hair Loss"] || hairLoss;
+                        } else if (typeof data.result === 'string') {
+                            acne = data.result;
+                        }
+
+                        acneResult.textContent = "Acne: " + acne;
+                        fatigueResult.textContent = "Fatigue: " + fatigue;
+                        hairLossResult.textContent = "Hair Loss: " + hairLoss;
+
+                        const acneDetected = acne.toLowerCase().includes("yes");
+                        const fatigueDetected = ["mild", "moderate", "severe"].includes(fatigue.toLowerCase());
+                        const hairLossDetected = hairLoss.toLowerCase().includes("yes");
+
+                        if ((acneDetected || fatigueDetected || hairLossDetected) && !redirected) {
+                            redirected = true;
+                            alertBox.classList.remove("d-none");
+                            console.log(" Redirecting to /predict...");
+                            setTimeout(() => {
+                                window.location.href = "/predict";
+                            }, 3000);
+                        }
+                    })
+                    .catch(err => {
+                        console.error(" Backend error:", err);
+                    });
+                }, 5000);
+            })
+            .catch((err) => {
+                alert(" Webcam not accessible: " + err);
+            });
+    }
+</script>
+
+{% endblock %}

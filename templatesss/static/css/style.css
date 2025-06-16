@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2, h4 {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.alert {
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.accordion-button {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    padding: 15px;
+}
+
+ul {
+    text-align: left;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PCOS Subtype Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f8e1f4, #e0f7fa);
+            padding: 40px;
+            margin: 0;
+        }
+
+        .form-box {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 20px;
+            max-width: 550px;
+            margin: auto;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: 0.3s ease-in-out;
+        }
+
+        .form-box:hover {
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff69b4;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #e754a1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d63384;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 25px;
+            background-color: #e6ffe6;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,128,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-box">
+        <h2>PCOS Subtype Predictor</h2>
+        <form method="POST" action="/predict">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Weight (kg):</label>
+            <input type="number" name="weight" step="0.1" required>
+
+            <label>Do you have acne?</label>
+            <select name="acne">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Do you have hair loss?</label>
+            <select name="hair_loss">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Are your periods irregular?</label>
+            <select name="irregular_period">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Do you experience insulin resistance symptoms?</label>
+            <select name="insulin">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Do you often feel tired or fatigued?</label>
+            <select name="fatigue">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Predict Subtype</button>
+        </form>
+
+        {% if prediction %}
+            <h3>{{ prediction }}</h3>
+        {% endif %}
+    </div>
+
+</body>
+</html>

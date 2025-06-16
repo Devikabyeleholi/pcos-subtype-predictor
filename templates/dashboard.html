@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome | PCOS Predictor{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="fw-bold text-primary mb-3">Welcome to PCOS Smart Health</h2>
+    <p class="lead">Choose how you want to proceed with symptom analysis:</p>
+
+    <div class="d-flex justify-content-center gap-4 mt-4">
+        <!-- Webcam Button -->
+        <a href="/video" class="btn btn-outline-primary btn-lg shadow-sm">
+             Start Webcam Detection
+        </a>
+
+        <!-- Manual Entry Button -->
+        <a href="/predict" class="btn btn-outline-success btn-lg shadow-sm">
+             Manual Prediction
+        </a>
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3063/3063827.png" class="mt-5" width="100" alt="PCOS AI">
+</div>
+{% endblock %}

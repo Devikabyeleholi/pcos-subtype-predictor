@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Predict | PCOS Subtype{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+    <h2 class="text-center text-danger mb-4">Predict Your PCOS Subtype</h2>
+    <div class="card p-4 shadow-sm mx-auto" style="max-width: 600px;">
+
+        <form method="POST" action="/predict" id="predictForm">
+
+            <!-- Auto-Detect Toggle -->
+            <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" value="yes" id="autoDetect" name="autoDetect" onchange="toggleFields()">
+                <label class="form-check-label fw-bold" for="autoDetect">
+                    🤖 Use Webcam to Auto-Detect Symptoms (Beta)
+                </label>
+            </div>
+
+            <!-- Basic Inputs -->
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input type="number" name="age" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" name="weight" class="form-control" step="0.1" required>
+            </div>
+
+            <!-- Symptom Inputs -->
+            <div class="mb-3 symptom-input">
+                <label class="form-label">Do you have acne?</label>
+                <select name="acne" class="form-select">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3 symptom-input">
+                <label class="form-label">Do you have hair loss?</label>
+                <select name="hair_loss" class="form-select">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3 symptom-input">
+                <label class="form-label">Are your periods irregular?</label>
+                <select name="irregular_period" class="form-select">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3 symptom-input">
+                <label class="form-label">Do you experience insulin resistance symptoms?</label>
+                <select name="insulin" class="form-select">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="mb-3 symptom-input">
+                <label class="form-label">Do you often feel tired or fatigued?</label>
+                <select name="fatigue" class="form-select">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-success">🔮 Predict Subtype</button>
+            </div>
+
+            <!-- Spinner -->
+            <div id="spinner" class="text-center d-none mt-3">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </form>
+
+        <!-- Result Panel -->
+        {% if prediction %}
+        <div class="alert alert-info text-center mt-4">
+            <h4>🧬 Predicted Subtype: <strong>{{ prediction }}</strong></h4>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Script to toggle form fields -->
+<script>
+    function toggleFields() {
+        const isChecked = document.getElementById('autoDetect').checked;
+        const fields = document.querySelectorAll('.symptom-input select');
+        fields.forEach(field => {
+            field.disabled = isChecked;
+        });
+    }
+</script>
+{% endblock %}
