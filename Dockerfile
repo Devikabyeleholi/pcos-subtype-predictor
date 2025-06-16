@@ -1,31 +1,35 @@
-# Use a lightweight Python base image
-FROM python:3.10-slim
+# Use ultra-slim base image
+FROM python:3.10-alpine
 
-# Set working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Install system dependencies required by OpenCV headless and MediaPipe
-RUN apt-get update && apt-get install -y \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Install system dependencies (media and OpenCV requirements)
+RUN apk add --no-cache \
+    libstdc++ \
+    ffmpeg \
+    libx11 \
+    libgcc \
+    libjpeg-turbo \
+    libwebp \
+    tiff \
+    zlib
 
-# Copy requirement file and install Python dependencies
+# Copy and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of your project files into the container
+# Copy the app code
 COPY . .
 
-# Set environment variables for Flask
+# Set environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=production
 
-# Expose port (adjust as per your app)
+# Expose port
 EXPOSE 10000
 
-# Start the Flask app using Gunicorn (for production use)
+# Start the Flask app
 CMD ["gunicorn", "-b", "0.0.0.0:10000", "app:app"]
