@@ -1,0 +1,101 @@
+Patient ID,Menstrual Irregularities,Weight Issues,Acne,Hirsutism (Excess Hair Growth),Hair Loss/Baldness,Obesity Type,Sebum Production (Oily Skin/Scalp),Scalp Hair Loss,Diet,Antiseptic Pills Usage,Neck Pigmentation(Acanthosis Nigricans),Age Group,Lifestyle,Stress Level,HRV,Body Temperature,Food Habits,PCOS Confirmation
+PCOS_001,No,Obese,None,No,No,None,No,No,Balanced,No,No,Teenager,Sedentary,Low,Normal,Elevated,Mixed,No
+PCOS_002,Yes,Underweight,Mild,Yes,No,Pill-Induced,No,No,Junk/Fast food,Yes,No,Adult,Sedentary,Medium,Low,Normal,Non-Veg,Yes
+PCOS_003,No,Normal,Mild,No,No,None,No,No,Home-cooked,Yes,No,Senior,Sedentary,High,Normal,Elevated,Non-Veg,No
+PCOS_004,No,Underweight,Mild,No,No,None,No,No,Balanced,No,No,Teenager,Moderate,Low,Normal,Normal,Mixed,No
+PCOS_005,No,Obese,None,No,No,None,No,No,Home-cooked,Yes,No,Young Adult,Active,Low,High,Slightly High,Vegan,No
+PCOS_006,No,Underweight,None,Yes,Yes,Obese PCOS,Yes,Yes,Junk/Fast food,No,Yes,Adult,Sedentary,High,High,Slightly High,Non-Veg,Yes
+PCOS_007,Yes,Obese,Severe,Yes,No,Obese PCOS,Yes,No,Junk/Fast food,No,Yes,Adult,Sedentary,Medium,Normal,Normal,Mixed,Yes
+PCOS_008,No,Normal,Severe,No,No,Obese PCOS,No,Yes,Home-cooked,Yes,Yes,Adult,Sedentary,High,Normal,Elevated,Non-Veg,Yes
+PCOS_009,Yes,Obese,Moderate,No,Yes,Lean PCOS,No,Yes,Junk/Fast food,No,Yes,Senior,Sedentary,High,Normal,Normal,Vegetarian,Yes
+PCOS_010,No,Normal,None,No,No,None,No,No,Junk/Fast food,Yes,No,Teenager,Moderate,Medium,Low,Elevated,Non-Veg,No
+PCOS_011,Yes,Overweight,Severe,No,No,Inflammatory,No,Yes,Balanced,No,No,Senior,Sedentary,Low,Low,Normal,Vegetarian,Yes
+PCOS_012,No,Obese,Moderate,No,Yes,Obese PCOS,Yes,Yes,Junk/Fast food,Yes,Yes,Adult,Active,High,High,Slightly High,Vegetarian,Yes
+PCOS_013,No,Obese,None,Yes,Yes,Obese PCOS,No,No,Junk/Fast food,No,Yes,Teenager,Moderate,Medium,Low,Slightly High,Non-Veg,Yes
+PCOS_014,No,Normal,Severe,Yes,Yes,Obese PCOS,Yes,No,Balanced,Yes,No,Adult,Sedentary,Low,High,Elevated,Non-Veg,Yes
+PCOS_015,No,Obese,Mild,No,Yes,Obese PCOS,No,No,Home-cooked,No,No,Young Adult,Moderate,Low,Low,Normal,Vegetarian,Yes
+PCOS_016,No,Obese,Mild,No,No,None,No,No,Junk/Fast food,Yes,No,Teenager,Active,Low,Low,Normal,Vegetarian,No
+PCOS_017,Yes,Obese,Severe,No,No,Insulin-Resistant,Yes,No,Balanced,No,Yes,Teenager,Sedentary,High,Low,Normal,Non-Veg,Yes
+PCOS_018,No,Normal,None,No,No,None,No,No,Home-cooked,No,No,Senior,Sedentary,Medium,Low,Normal,Vegan,No
+PCOS_019,No,Overweight,None,No,No,None,No,No,Junk/Fast food,Yes,No,Senior,Sedentary,Low,Normal,Elevated,Vegan,No
+PCOS_020,No,Obese,None,No,No,None,No,No,Home-cooked,Yes,No,Young Adult,Moderate,Low,Low,Slightly High,Mixed,No
+PCOS_021,No,Normal,Severe,No,Yes,None,Yes,Yes,Junk/Fast food,No,No,Adult,Sedentary,Low,High,Normal,Non-Veg,Yes
+PCOS_022,No,Normal,Severe,No,No,Insulin-Resistant,Yes,Yes,Balanced,Yes,Yes,Young Adult,Sedentary,Medium,Normal,Normal,Vegetarian,Yes
+PCOS_023,No,Normal,None,No,No,None,No,No,Balanced,Yes,No,Adult,Moderate,Low,Normal,Normal,Mixed,No
+PCOS_024,Yes,Underweight,Severe,Yes,No,Lean PCOS,No,No,Home-cooked,Yes,No,Senior,Sedentary,High,High,Normal,Non-Veg,Yes
+PCOS_025,No,Normal,Mild,No,No,None,No,No,Home-cooked,Yes,No,Teenager,Moderate,Medium,Low,Normal,Mixed,No
+PCOS_026,No,Obese,None,No,No,None,No,No,Balanced,No,No,Teenager,Moderate,High,Normal,Slightly High,Mixed,No
+PCOS_027,Yes,Underweight,None,Yes,Yes,Obese PCOS,No,No,Junk/Fast food,No,Yes,Young Adult,Moderate,Medium,Normal,Slightly High,Mixed,Yes
+PCOS_028,Yes,Underweight,Moderate,Yes,Yes,Pill-Induced,No,Yes,Home-cooked,No,No,Adult,Sedentary,High,High,Slightly High,Mixed,Yes
+PCOS_029,No,Obese,Mild,No,No,None,No,No,Junk/Fast food,No,No,Senior,Sedentary,High,High,Normal,Mixed,No
+PCOS_030,Yes,Obese,None,Yes,No,None,Yes,Yes,Balanced,No,Yes,Teenager,Active,Medium,Normal,Elevated,Vegetarian,Yes
+PCOS_031,No,Underweight,Mild,No,No,None,No,No,Balanced,Yes,No,Teenager,Active,Low,Normal,Normal,Vegetarian,No
+PCOS_032,Yes,Obese,Moderate,No,Yes,Inflammatory,No,Yes,Junk/Fast food,Yes,Yes,Young Adult,Active,High,Normal,Normal,Vegetarian,Yes
+PCOS_033,No,Normal,None,No,No,Lean PCOS,No,Yes,Home-cooked,No,No,Teenager,Active,Medium,Normal,Normal,Vegan,Yes
+PCOS_034,No,Obese,Mild,No,No,None,No,No,Home-cooked,No,No,Senior,Active,Low,Normal,Slightly High,Vegetarian,No
+PCOS_035,Yes,Obese,Moderate,No,No,None,Yes,No,Balanced,No,Yes,Young Adult,Moderate,High,High,Elevated,Mixed,Yes
+PCOS_036,Yes,Overweight,None,Yes,No,Obese PCOS,No,No,Home-cooked,Yes,Yes,Young Adult,Active,Medium,Normal,Slightly High,Vegan,Yes
+PCOS_037,Yes,Normal,Moderate,No,No,Lean PCOS,No,No,Junk/Fast food,Yes,No,Young Adult,Active,High,High,Elevated,Vegetarian,Yes
+PCOS_038,No,Normal,Moderate,Yes,Yes,Inflammatory,No,Yes,Balanced,Yes,No,Young Adult,Moderate,Medium,Normal,Elevated,Vegan,Yes
+PCOS_039,Yes,Obese,None,No,No,Lean PCOS,Yes,No,Balanced,No,Yes,Young Adult,Sedentary,Low,Low,Elevated,Vegetarian,Yes
+PCOS_040,Yes,Underweight,Moderate,Yes,No,Pill-Induced,No,Yes,Junk/Fast food,No,No,Adult,Sedentary,Low,Normal,Elevated,Non-Veg,Yes
+PCOS_041,No,Normal,Moderate,Yes,Yes,Inflammatory,Yes,Yes,Balanced,No,No,Adult,Active,Low,High,Slightly High,Vegetarian,Yes
+PCOS_042,No,Obese,None,Yes,No,Pill-Induced,No,No,Junk/Fast food,Yes,No,Adult,Sedentary,Low,Normal,Normal,Vegan,Yes
+PCOS_043,No,Obese,Mild,Yes,No,Insulin-Resistant,Yes,No,Junk/Fast food,No,No,Young Adult,Sedentary,Low,Low,Elevated,Mixed,Yes
+PCOS_044,No,Overweight,None,No,No,None,No,No,Home-cooked,Yes,No,Adult,Sedentary,Low,Low,Slightly High,Mixed,No
+PCOS_045,No,Normal,Mild,No,No,None,No,No,Home-cooked,No,No,Senior,Sedentary,Low,Low,Slightly High,Non-Veg,No
+PCOS_046,No,Underweight,Mild,No,No,None,No,No,Home-cooked,No,No,Young Adult,Moderate,Low,Normal,Elevated,Non-Veg,No
+PCOS_047,Yes,Underweight,Mild,No,Yes,Inflammatory,No,Yes,Junk/Fast food,No,No,Adult,Moderate,High,High,Elevated,Vegan,Yes
+PCOS_048,No,Obese,None,No,No,Lean PCOS,No,No,Home-cooked,Yes,Yes,Young Adult,Sedentary,Low,Normal,Normal,Vegan,Yes
+PCOS_049,No,Underweight,None,Yes,No,Inflammatory,No,No,Balanced,Yes,No,Young Adult,Moderate,High,Normal,Elevated,Mixed,Yes
+PCOS_050,Yes,Normal,Mild,No,Yes,None,Yes,No,Home-cooked,No,Yes,Adult,Active,High,Normal,Normal,Mixed,Yes
+PCOS_051,Yes,Underweight,Mild,No,No,Pill-Induced,No,No,Junk/Fast food,No,Yes,Young Adult,Sedentary,Low,Normal,Slightly High,Mixed,Yes
+PCOS_052,No,Overweight,Severe,No,Yes,Obese PCOS,No,No,Balanced,Yes,Yes,Senior,Active,Medium,Normal,Normal,Non-Veg,Yes
+PCOS_053,No,Obese,Mild,No,No,None,No,No,Junk/Fast food,Yes,No,Teenager,Sedentary,Low,Low,Slightly High,Mixed,No
+PCOS_054,No,Normal,None,No,No,None,No,No,Balanced,Yes,No,Senior,Moderate,Low,Normal,Normal,Non-Veg,No
+PCOS_055,No,Obese,None,No,No,None,No,No,Balanced,Yes,No,Adult,Sedentary,High,Normal,Slightly High,Vegan,No
+PCOS_056,No,Underweight,Severe,Yes,No,Lean PCOS,Yes,Yes,Balanced,No,Yes,Teenager,Moderate,High,Normal,Elevated,Vegetarian,Yes
+PCOS_057,No,Normal,None,No,No,None,No,No,Junk/Fast food,Yes,No,Senior,Active,Medium,Low,Slightly High,Vegetarian,No
+PCOS_058,Yes,Normal,Severe,No,No,Pill-Induced,No,No,Junk/Fast food,No,No,Senior,Sedentary,Low,Low,Slightly High,Mixed,Yes
+PCOS_059,No,Normal,None,No,No,None,No,No,Junk/Fast food,Yes,No,Adult,Sedentary,Medium,Normal,Normal,Vegan,No
+PCOS_060,No,Normal,None,No,No,None,No,No,Junk/Fast food,No,No,Teenager,Active,Low,High,Slightly High,Vegan,No
+PCOS_061,No,Underweight,Mild,No,No,None,No,No,Junk/Fast food,Yes,No,Senior,Moderate,Low,High,Normal,Vegetarian,No
+PCOS_062,Yes,Normal,None,Yes,Yes,Lean PCOS,No,Yes,Balanced,Yes,No,Young Adult,Moderate,Low,Low,Slightly High,Vegan,Yes
+PCOS_063,Yes,Obese,Mild,No,Yes,Lean PCOS,No,No,Balanced,Yes,Yes,Adult,Moderate,High,High,Normal,Vegan,Yes
+PCOS_064,Yes,Underweight,None,No,No,Pill-Induced,No,Yes,Balanced,No,No,Senior,Moderate,High,Low,Elevated,Vegan,Yes
+PCOS_065,No,Normal,None,No,No,None,No,No,Home-cooked,Yes,No,Adult,Sedentary,High,Normal,Elevated,Non-Veg,No
+PCOS_066,No,Overweight,Severe,No,No,Pill-Induced,No,Yes,Home-cooked,Yes,No,Senior,Active,Medium,High,Normal,Mixed,Yes
+PCOS_067,No,Overweight,Mild,No,No,None,No,No,Balanced,Yes,No,Teenager,Moderate,Low,High,Normal,Mixed,No
+PCOS_068,No,Obese,Mild,No,No,None,No,No,Home-cooked,No,No,Adult,Active,Medium,Normal,Slightly High,Vegan,No
+PCOS_069,No,Obese,Moderate,No,Yes,Lean PCOS,Yes,Yes,Junk/Fast food,No,No,Adult,Moderate,Low,Normal,Elevated,Vegetarian,Yes
+PCOS_070,No,Overweight,None,No,No,None,No,No,Junk/Fast food,No,No,Senior,Active,Medium,Low,Elevated,Vegetarian,No
+PCOS_071,Yes,Overweight,Mild,No,No,None,No,Yes,Home-cooked,Yes,No,Senior,Sedentary,Low,Low,Normal,Vegan,Yes
+PCOS_072,Yes,Obese,Severe,Yes,Yes,Insulin-Resistant,No,No,Junk/Fast food,Yes,No,Adult,Active,Medium,High,Normal,Non-Veg,Yes
+PCOS_073,No,Overweight,Severe,No,No,Pill-Induced,Yes,Yes,Home-cooked,Yes,No,Senior,Active,Low,Normal,Normal,Non-Veg,Yes
+PCOS_074,No,Obese,Mild,No,Yes,None,Yes,Yes,Home-cooked,Yes,No,Adult,Sedentary,Low,Normal,Elevated,Non-Veg,Yes
+PCOS_075,No,Obese,Moderate,Yes,Yes,Obese PCOS,Yes,No,Balanced,No,Yes,Adult,Active,Medium,Low,Elevated,Non-Veg,Yes
+PCOS_076,No,Overweight,None,No,No,None,No,No,Balanced,No,No,Adult,Sedentary,Medium,High,Slightly High,Vegetarian,No
+PCOS_077,Yes,Overweight,Severe,Yes,Yes,Insulin-Resistant,Yes,Yes,Junk/Fast food,No,Yes,Adult,Sedentary,High,High,Slightly High,Vegetarian,Yes
+PCOS_078,No,Underweight,Moderate,No,No,Obese PCOS,Yes,Yes,Balanced,Yes,Yes,Adult,Active,Low,Normal,Slightly High,Non-Veg,Yes
+PCOS_079,No,Obese,None,No,No,None,No,No,Home-cooked,Yes,No,Adult,Sedentary,High,High,Normal,Mixed,No
+PCOS_080,Yes,Obese,Severe,Yes,Yes,Pill-Induced,No,No,Junk/Fast food,No,Yes,Senior,Sedentary,High,Normal,Elevated,Vegetarian,Yes
+PCOS_081,No,Obese,Mild,No,No,None,No,No,Junk/Fast food,Yes,No,Adult,Moderate,High,High,Elevated,Non-Veg,No
+PCOS_082,No,Normal,Mild,No,No,None,No,No,Junk/Fast food,No,No,Adult,Active,High,High,Elevated,Mixed,No
+PCOS_083,No,Normal,Mild,No,No,None,No,No,Balanced,No,No,Senior,Active,Low,Normal,Slightly High,Mixed,No
+PCOS_084,No,Obese,Mild,No,No,None,No,No,Home-cooked,No,No,Adult,Active,Low,Normal,Normal,Vegetarian,No
+PCOS_085,Yes,Overweight,None,No,Yes,Lean PCOS,Yes,No,Balanced,Yes,No,Senior,Moderate,Low,High,Normal,Vegan,Yes
+PCOS_086,No,Overweight,Severe,No,No,Lean PCOS,Yes,Yes,Home-cooked,Yes,Yes,Young Adult,Active,Medium,High,Slightly High,Non-Veg,Yes
+PCOS_087,No,Normal,Severe,No,No,Pill-Induced,No,No,Balanced,Yes,Yes,Young Adult,Moderate,Low,Low,Normal,Non-Veg,Yes
+PCOS_088,Yes,Overweight,Severe,Yes,Yes,Pill-Induced,No,No,Junk/Fast food,Yes,Yes,Senior,Sedentary,Medium,Normal,Slightly High,Mixed,Yes
+PCOS_089,Yes,Normal,Moderate,Yes,No,Inflammatory,No,No,Balanced,Yes,No,Adult,Moderate,Medium,Low,Slightly High,Vegan,Yes
+PCOS_090,No,Normal,None,No,No,None,No,No,Balanced,Yes,No,Teenager,Moderate,Low,Normal,Slightly High,Vegetarian,No
+PCOS_091,No,Obese,None,No,No,None,No,No,Balanced,No,No,Teenager,Moderate,Low,Normal,Slightly High,Non-Veg,No
+PCOS_092,No,Obese,None,No,No,None,No,No,Junk/Fast food,No,No,Adult,Sedentary,Low,High,Slightly High,Mixed,No
+PCOS_093,No,Overweight,Severe,Yes,No,Pill-Induced,Yes,Yes,Junk/Fast food,No,No,Young Adult,Sedentary,Low,Low,Normal,Vegan,Yes
+PCOS_094,No,Normal,Moderate,Yes,No,Lean PCOS,No,Yes,Balanced,Yes,Yes,Adult,Active,Low,Low,Normal,Vegetarian,Yes
+PCOS_095,No,Underweight,Moderate,Yes,No,Inflammatory,Yes,No,Junk/Fast food,Yes,No,Adult,Moderate,High,Low,Elevated,Mixed,Yes
+PCOS_096,Yes,Normal,Severe,No,Yes,Insulin-Resistant,No,Yes,Balanced,No,Yes,Adult,Moderate,Medium,High,Slightly High,Vegetarian,Yes
+PCOS_097,Yes,Overweight,None,No,Yes,None,No,No,Junk/Fast food,Yes,Yes,Adult,Sedentary,High,Normal,Normal,Vegan,Yes
+PCOS_098,Yes,Obese,None,No,No,Insulin-Resistant,No,No,Balanced,Yes,No,Senior,Moderate,Low,Low,Slightly High,Vegetarian,Yes
+PCOS_099,No,Obese,Moderate,Yes,No,Inflammatory,No,Yes,Home-cooked,No,Yes,Senior,Sedentary,High,Low,Slightly High,Vegetarian,Yes
+PCOS_100,No,Overweight,Mild,No,No,None,No,No,Junk/Fast food,No,No,Adult,Sedentary,Low,Normal,Slightly High,Non-Veg,No

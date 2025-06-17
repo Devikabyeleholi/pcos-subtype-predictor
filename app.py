@@ -5,7 +5,7 @@ import os
 import base64
 import numpy as np
 import cv2
-from model import predict_pcos_subtype
+from model import predict_pcos_model_based
 from symptom_detection import detect_symptoms_from_image
 
 app = Flask(__name__)
@@ -31,17 +31,12 @@ def login():
     name = request.form['name']
     age = request.form['age']
     gender = request.form['gender']
-
-    # OPTIONAL: Save user session info or write to a log
     print(f"User logged in: {name}, Age: {age}, Gender: {gender}")
-
     return redirect(url_for('dashboard'))
-
 
 @app.route('/manual')
 def manual_prediction():
-    return render_template('prediction.html')  
-
+    return render_template('prediction.html')
 
 @app.context_processor
 def inject_now():
@@ -121,19 +116,51 @@ def predict():
             irregular_period = request.form['irregular_period']
             insulin = request.form['insulin']
             fatigue = request.form['fatigue']
-        prediction = predict_pcos_subtype(
-            age, weight, acne, hair_loss, irregular_period, insulin, fatigue
-        )
-        tips = get_recommendations(prediction)
+
+        # Prepare input dictionary for model
+        input_dict = {
+            "Menstrual Irregularities": irregular_period,
+            "Weight Issues": "Overweight" if weight > 55 else "Normal",
+            "Acne": acne,
+            "Hirsutism (Excess Hair Growth)": "Unknown",
+            "Hair Loss/Baldness": hair_loss,
+            "Obesity Type": "Obese PCOS",
+            "Sebum Production (Oily Skin/Scalp)": "Unknown",
+            "Scalp Hair Loss": "Unknown",
+            "Diet": "Junk/Fast food",
+            "Antiseptic Pills Usage": "No",
+            "Neck Pigmentation(Acanthosis Nigricans)": "No",
+            "Age Group": "Young Adult" if age < 30 else "Adult",
+            "Lifestyle": "Sedentary",
+            "Stress Level": "High" if fatigue == "Severe" else "Moderate",
+            "HRV": "Low",
+            "Body Temperature": "Normal",
+            "Food Habits": "Vegetarian"
+        }
+
+        # Predict using the model
+        prediction = predict_pcos_model_based(input_dict)
+
+        # Extract subtype from prediction (clean string if needed)
+        subtype = prediction.replace("Predicted:", "").strip()
+
+        # Get recommendations based on subtype
+        tips = get_recommendations(subtype)
+
+        # Log the prediction (optional)
         with open('prediction_logs.csv', 'a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerow([
                 age, weight, acne, hair_loss, irregular_period,
-                insulin, fatigue, prediction,
+                insulin, fatigue, subtype,
                 datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             ])
-        return redirect(url_for('result', prediction=prediction))
+
+        # Pass both prediction and tips to result
+        return render_template('result.html', prediction=subtype, tips=tips)
+
     return render_template('predict.html')
+
 
 @app.route('/result')
 def result():
