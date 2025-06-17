@@ -2,7 +2,6 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install only the absolutely necessary system dependencies
 RUN apt-get update && apt-get install -y \
     libgl1 \
     ffmpeg \
@@ -15,5 +14,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000"]
-
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:$PORT"]
