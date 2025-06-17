@@ -11,9 +11,9 @@ from symptom_detection import detect_symptoms_from_image
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    return "Hello, PCOS Queen!"
+@app.route('/')
+def home():
+    return "PCOS Subtype Predictor Running..."
 
 latest_symptom_data = {
     "acne": "No",
