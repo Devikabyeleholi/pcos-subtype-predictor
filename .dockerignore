@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+*.ipynb
+.ipynb_checkpoints/
+.git
+*.md
+.env
+*.jpg
+*.png
+*.csv
+*.xlsx
