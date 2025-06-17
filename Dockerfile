@@ -30,5 +30,6 @@ ENV FLASK_ENV=production
 # Expose the port your app will run on
 EXPOSE 10000
 
-# Start using gunicorn (production server)
-CMD ["gunicorn", "-b", "0.0.0.0:10000", "app:app"]
+# Start the Flask app on Railway-assigned port
+CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "app:app"]
+
