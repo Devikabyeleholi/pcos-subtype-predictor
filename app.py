@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from datetime import datetime
 import csv
 import os
+from flask import Flask
 import base64
 import numpy as np
 import cv2
@@ -9,6 +10,10 @@ from model import predict_pcos_model_based
 from symptom_detection import detect_symptoms_from_image
 
 app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello, PCOS Queen!"
 
 latest_symptom_data = {
     "acne": "No",
@@ -219,4 +224,4 @@ def admin_login():
 if __name__ == '__main__':
     print("Starting Flask App...")
     port = int(os.environ.get("PORT", 5000))
-app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)
